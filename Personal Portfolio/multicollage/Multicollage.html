@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Agoraphobia</title>
+        <meta charset="UTF.8">
+    <style>
+        body{
+            color:azure;
+            background-image: url("collage/backdrop.gif");
+            background-size:cover;
+            height: 90vh;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+        
+        .title{
+            font-size:30px;
+            color:white;
+            position:fixed;
+            top:370px;
+            left:180px;
+            font-family:'Courier New', Courier, monospace;
+            font-weight:normal;
+            text-shadow: 0 0 5px darkblue, 0 0 10px white, 0 0 15px white, 0 0 20px blue, 0 0 25px rgb(0, 136, 255), 0 0 30px blue, 0 0 100px rgb(0, 132, 255), 0 0 200px black;
+            Opacity:0.7;
+            transition:opacity 0.5s,
+            text-shadow 0.5s,
+            font-weight 0.5s;
+            z-index:200;
+        }
+
+        .title:hover{
+            Opacity:1;
+            font-size:40px;
+            font-weight:bold;
+            position:fixed;
+            top:360px;
+            left:235px;
+            text-shadow: 0 0 10px blue, 0 0 15px white, 0 0 20px white, 0 0 25px aqua, 0 0 30px rgb(0, 136, 255), 0 0 35px aqua, 0 0 40px blue;
+
+        }
+
+        #text{
+            width:27vw;
+            font-size:12px;
+            color:white;
+            transition:font-style 0.5s,
+            font-size 0.5s,
+            position 2s,
+            font-weight 0.5s;
+            cursor:pointer;
+            font-family:'Courier New', Courier, monospace;
+        }
+
+        #text:active{
+            font-style:italic;
+            font-size:17px;
+            font-weight:bold;
+            margin-left:10px;
+            color:aqua;
+            width:13vw;
+            position:fixed;
+            top:125px;
+            left:1050px;
+
+        }
+
+        .beauty,
+        .sublime,
+        .space{
+            font-size:40px;
+            text-shadow: 0 0 5px darkblue, 0 0 10px white, 0 0 15px white, 0 0 20px blue, 0 0 25px rgb(0, 136, 255), 0 0 30px blue, 0 0 100px rgb(0, 132, 255), 0 0 200px black;
+            
+        }
+
+        .space{
+            display:block;
+            margin-bottom:20px;
+        }
+
+        audio{
+            position:fixed;
+            top:30px;
+            right:0px;
+            opacity:0.5;
+            transition:position 0.5s;
+        }
+
+        audio::-webkit-media-controls-panel {
+        background-color: rgb(6, 6, 69);
+        }
+
+        audio::-webkit-media-controls-play-button {
+        background-color:white;
+        border-radius: 50%;
+        padding: 5px;
+        margin-right:15px;
+        }
+
+        audio::-webkit-media-controls-mute-button {
+        color: white;
+        border-radius: 50%;
+        padding: 5px;
+        }
+
+        audio::-webkit-media-controls-volume-slider {
+        width: 2.25vw;
+        color:white;
+        background-color:white;
+        border-radius:40px;
+        padding-left:30px;
+        padding-right:30px;
+        }
+
+        audio::-webkit-media-controls-current-time-display,
+        audio::-webkit-media-controls-time-remaining-display {
+        font-size: 14px;
+        color:white;
+        font-family:'Courier New', Courier, monospace;
+        }
+
+        audio::-webkit-media-controls-timeline{
+            color:white;
+        }
+
+        .hand-image{
+            height:300px;
+            width:26.25vw;
+            position:absolute;
+            top:140px;
+            left:-25vw;
+            z-index:100;
+        }
+
+        .city{
+            position:absolute;
+            top:260px;
+            left:-600px;
+            
+        }
+
+        .sun{
+            width:27vw;
+            position:fixed;
+            top:20px;
+            left:20px;
+            background-image: radial-gradient(white,orange,red);
+            opacity:0.5;
+            padding:10px;
+            height:150px;
+        }
+
+        .sun-text{
+            font-size:15px;
+            margin-top:35px;
+            color:rgb(255, 235, 199);
+            font-weight:bold;
+            font-family:'Courier New', Courier, monospace;
+            text-shadow: 0 0 5px darkblue, 0 0 10px white, 0 0 15px white;
+            position:fixed;
+            top:2px;
+            left:34px;
+            width:330px;
+            z-index:200;
+            opacity:0;
+            transition: opacity 0.5s;
+            cursor:pointer;
+        }
+
+        .sun-text:hover{
+            opacity:1;
+        }
+
+        .sun-text:active{
+
+        }
+
+        .sun-detail{
+            color:orangered;
+            font-size:25px;
+            display:inline-block;
+        }
+
+        .leaves{
+            margin-top:10px;
+            color:orange;
+        }
+        .mud{
+            color:orange;
+            margin-bottom:10px;
+        }
+        .water{
+            color:orange;
+        }
+
+        .leaves,
+        .mud,
+        .water{
+            display:block;
+            font-size:30px;
+        }
+
+        .weight{
+            width:15px;
+            display:block;
+        }
+
+        .window{
+            position:relative;
+
+        }
+
+        .window-image{
+            position:relative;
+            top:0px;
+            left:-150px;
+            width:100px;
+        }
+
+        .title1{
+                display:inline-block;
+            }
+
+            .modal{
+                background-color:rgb(0, 0, 0);
+                width:400px;
+                height:150px;
+                padding:10px;
+                padding-bottom:20px;
+                border-radius:10px;
+                position: fixed;
+                top:600px;
+                left:30px;
+                padding: 10px;
+                border-radius: 5px;
+               
+            }
+
+            .title1{
+                font-size:10px;
+                font-weight:bold;
+                margin-bottom:3px;
+                margin-left:9px;
+                margin-top:-140px;
+                font-family:'Courier New', Courier, monospace;
+                z-index:400;
+                position:relative;
+                top:30px;
+                left:-245px;
+                width:100px;
+                color:white;
+            }
+
+            a:visited{
+            color:lightsalmon;
+            }
+
+            a:hover{
+                color:orangered;
+            }
+
+
+            .close {
+            position: relative;
+            top: -190px;
+            right: -350px;
+            font-size: 15px;
+            font-weight: bold;
+            text-decoration: none;
+            color: orangered;
+            background-color:darkblue;
+            border:0;
+            padding:4px;
+            border-radius:10px;
+            transition: text-shadow 0.5s;
+            z-index:200;
+            }
+
+            .close:hover {
+                text-shadow: 0 0 10px blue, 0 0 15px white, 0 0 20px white, 0 0 25px aqua;
+            }
+
+            .board{
+                position:relative;
+                top:2vh;
+                right:-8.2vw;
+            }
+
+            .planets-detail{
+                position: absolute;
+                left: -300px;
+                top: 650px;
+                cursor: pointer;
+                height:100px;
+                width:100px;
+                z-index:-100;
+            }
+
+            .walkman-detail{
+                position: absolute;
+                left: 810px;
+                top: 695px;
+                cursor: pointer;
+                height:90px;
+                width:90px;
+                z-index:100;
+            }
+
+            .container{
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(200, 200, 200);
+                width: 150px;
+                border-radius: 6px;
+                position:fixed;
+                right:40px;
+                top:200px;
+                height:150px;
+
+            }
+
+            #flexbox{
+                font-size:17px;
+                margin-top:10px;
+                padding:10px;
+                color:white;
+                font-family:'Courier New', Courier, monospace;
+            }
+
+            .container1{
+                border-width: 1px;
+                border-style: solid;
+                border-color: rgb(200, 200, 200);
+                width: 160px;
+                border-radius: 6px;
+                position:fixed;
+                right:40px;
+                top:650px;
+                height:150px;
+
+            }
+
+            .hidden-image{
+                width:500px;
+                height:670px;
+                margin-top:20px;
+            }
+
+            .find{
+                font-size:7px;
+            }
+
+            .long-detail{
+                position:relative;
+                right:-550px;
+                height:450px;
+                width:100px;
+                top:-1550px;
+                transition: position 0.5s ease-in-out, 
+                box-shadow 0.5s step-end;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+            }
+
+            .long-detail:hover{
+                position:relative;
+                top:-1300px;
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+
+            .pool{
+                position:fixed;
+                right:-40px;
+                bottom:205px;  
+                box-shadow: 0 0 30px rgba(0, 238, 255, 0.9);
+                border-radius:30px;
+            }
+
+            .pool-detail{
+                height:240px;
+                width:240px;
+                border-radius:30px;
+                transition: filter 0.5s ease-in-out;
+            }
+
+            .pool-detail:hover{
+                filter: invert(100%);
+            }
+
+
+
+
+        
+            
+    </style>
+    </head>
+    <body>
+        <a href="backroom.html">
+            <img class="first" src="collage/first.gif">
+        </a>
+        <p id="text">
+            Yet it wasn’t distasteful to him, for the words <span class="beauty">beauty</span> and <span class="sublime">sublime</span> were not in his world of words or sight. 
+            He has respectively <span class="space">__</span> emotion or judgments about anything, and he couldn’t find a way to feel disgusted toward the desolated structure. It was just not a capability he had. He was seated on the wooden stool placed along the side of the hallway of the byouin, located near the opening of the blood donation apartment. 
+        </p>
+        <div class="endless">
+            <img class="hidden-image" src="collage/fallen-angel.jpg">
+        </div>
+        <div class="long">
+            <img class="long-detail" src="collage/long.png">
+        </div>
+        <audio controls loop>
+            <source src="song.mp3" type="audio/mpeg"/>
+            </audio>
+        <div class="hand">
+            <img class="hand-image" src="collage/hand.gif">
+            <div class="title">
+            Agoraphobia
+            </div>
+        </div>
+        <div class="city">
+            <img src="collage/city.gif">
+        </div>
+        <div class="sun">
+        </div>
+        <div class="sun-text">
+            He likes to listen to how the <div><a class="sun-detail" href="https://www.youtube.com/watch?v=PLhKObIHefQ">S-U-N</a> </div>collapses every day, not anything soft like the mist that tingles his skin, but a persistent, subtle push into the <span class="leaves">LEAVES </span> <span class="water">WATER</span> <span class="mud">MUD</span><span class="weight">that barely sustains the sun’s weight.</span> 
+        </div>
+        <div class="modal">
+            <a href="graphics.html">
+                <img class="board" src="collage/board.png">
+            </a>
+            <div class="title1">
+               It's a sin to look back upon the crossroad of Noah; therefore, I shouldn't ask anymore, only to continue with the ritual that has never been manifested, clear, conspicuous, and addictive. 
+            </div>
+            <button class="close">
+                close
+            </button>
+        </div>
+        <div class="planets">
+            <img class="planets-detail" src="collage/planets.gif">
+        </div>
+
+        <a href="walkman.html">
+            <img class="walkman-detail" src="collage/walkman.gif">
+        </a>
+
+
+        <div class="container">
+            <p id="flexbox">
+                galaxy eater <span class="find">(find galaxy behind tab)</span></p>
+            </div>
+        </div>
+
+        <div class="container1">
+            <div id="flexbox">
+                walkman eater
+            </div>
+        </div>
+
+        <div class="pool">
+        <img class="pool-detail" src="collage/people.gif">
+        </div>
+
+    </body>
+
+    <script>
+
+
+        const closeButton = document.querySelector('.close');
+        const closeBox = document.querySelector('.modal');
+
+        closeButton.addEventListener('click', function() {
+            closeBox.style.display = 'none';
+        });
+
+    </script>
+
+    <script>
+
+        const image = document.querySelector('.planets-detail');
+        let isDragging = false;
+
+        image.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        image.style.pointerEvents = 'none';
+        });
+
+        document.addEventListener('mousemove', (event) => {
+        if (isDragging) {
+            const left = event.clientX - (image.width + 500);
+            const top = event.clientY - (image.height);
+            image.style.left = `${left}px`;
+            image.style.top = `${top}px`;
+        }
+        });
+
+        document.addEventListener('mouseup', () => {
+        isDragging = false;
+        image.style.pointerEvents = 'auto';
+        });
+
+        </script>
+
+        <script>
+        document.getElementById("text").addEventListener("click", function() {
+            document.getElementById("dead").style.display = "none";
+        });
+        </script>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-color:black;
+            }
+
+            #typing-animation{
+                color:white;
+                font-size:130px;
+                font-family:'Courier New', Courier, monospace;
+                white-space:pre-wrap;
+            }
+
+            .Agoraphobia{
+                color:rgb(19, 91, 91);
+                font-family:'Courier New', Courier, monospace;
+                font-size:30px;
+            }
+
+            a:hover{
+                color:aqua;
+                text-shadow:0 0 10px white, 0 0 15px white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="typing-animation"></div>
+        <a class="Agoraphobia" href="Multicollage.html">
+            Agoraphobia
+        </a>
+
+    </body>
+
+    <script>
+    var text = "RELIEF\nIN RELIEF \nINTO RELIEF\nOUT OF RELIEF";
+    var speed = 50; // The speed of the typing animation in milliseconds
+    var typingAnimationElement = document.getElementById("typing-animation");
+    var index = 0;
+    function type() {
+        if (index < text.length) {
+        typingAnimationElement.innerHTML += text.charAt(index);
+        index++;
+        setTimeout(type, speed);
+        }
+    }
+    type();
+</script>
+</html>
