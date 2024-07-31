@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <head>
+        <style>
+            body{
+            color:azure;
+            background-image: url("images/red.jpg");
+            background-size:cover;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+
+        .yoyo{
+            color:white;
+            position:absolute;
+            top:-25vh;
+            left:-33vw;
+            font-size:200px;
+            cursor:pointer;
+            transition: font-size 0.5s ease-out;
+        }
+
+        .yoyo:hover{
+            font-size:250px;
+
+        }
+
+        .唐子悠{
+            color:white;
+            position:absolute;
+            right:-20vw;
+            top:58vh;
+            font-size:200px;
+            cursor:pointer;
+            transition: font-size 0.5s ease-out,
+            position 0.5s ease-in;
+            text-decoration: none;
+        }
+
+        .唐子悠:hover{
+            font-size:220px;
+            text-decoration: underline 10px rgb(132, 4, 4);
+        }
+
+        .about{
+            position:absolute;
+            top:45vh;
+            font-size:30px;
+            right:23vw;
+            color:white;
+            opacity:1;
+            text-shadow:0 0 5px white;   
+            transition: text-shadow 0.5s ease-out, color 1s ease-in-out;
+        }
+
+        .about:hover{
+            color:orangered;
+            text-shadow:0 0 5px rgb(116, 1, 1);  
+        }
+
+
+        .story{
+            position:absolute;
+            top:68vh;
+            left:-10vw;
+            font-size:20px;
+            color:rgb(21, 54, 89);
+            text-shadow:0 0 3px white;
+            opacity:0;
+        }
+
+        .AI{
+            position:absolute;
+            top:85vh;
+            left:-10vw;
+            font-size:20px;
+            color:rgb(21, 54, 89);
+            text-shadow:0 0 3px white;
+            opacity:0;
+        }
+
+        .Unity{
+            position:absolute;
+            top:73vh;
+            left:-33vw;
+            font-size:20px;
+            color:rgb(21, 54, 89);
+            text-shadow:0 0 3px white;
+            opacity:0;
+        }
+
+        .multicollage{
+            position:absolute;
+            top:62vh;
+            left:-33vw;
+            font-size:20px;
+            color:rgb(21, 54, 89);
+            text-shadow:0 0 3px white;
+            opacity:0;
+        }
+
+        .p5js{
+            position:absolute;
+            top:60vh;
+            left:-15vw;
+            font-size:20px;
+            color:rgb(21, 54, 89);
+            text-shadow:0 0 3px white;
+            opacity:0;
+        }
+
+        .story:hover,
+        .AI:hover,
+        .Unity:hover,
+        .multicollage:hover,
+        .p5js:hover{
+            opacity:1;
+        }
+
+        .red{
+            position:absolute;
+            left:50vw;
+            top:20vh;
+        }
+
+        .red-detail{
+            border-radius:100px;
+            width:100px;
+            height:100px;
+        }
+
+        .explore{
+            font-size:20px;
+            position:relative;
+            top:52vh;
+            left:-40vh;
+            font-style:italic;
+            cursor:pointer;
+        }
+
+        .explore:hover{
+            font-size:25px;
+        }
+
+        .explore1{
+            font-size:20px;
+            position:fixed;
+            top:38vh;
+            left:9vh;
+            font-style:italic;
+            cursor:pointer;
+            transition: rotate 3s ease-in-out;
+        }
+
+        .explore1:hover{
+            text-shadow:0 0 10px white, 0 0 30px white;
+            rotate:360deg;
+        }
+
+        .explore:hover + .hidden-text{
+            display: block;
+        }
+
+        .yoyo:hover + .hidden-text1{
+            display: block;
+        }
+
+        .唐子悠:hover + .hidden-text2{
+            display: block;
+        }
+
+
+        .redish{
+            color:red;
+        }
+
+        .hidden-text {
+    display: none;
+    font-size:15px;
+    position:relative;
+    top:50vh;
+    color:orange;
+    left:-20vw;
+
+
+}
+
+.hidden-text1 {
+    display: none;
+    font-size:20px;
+    position:relative;
+    font-style:oblique;
+    text-decoration: double;
+    top:10vh;
+    color:rgb(29, 71, 108);
+    left:5vw;
+    transition:font-size 3s ease-in;
+    width:400px;
+}
+
+.hidden-text1:hover{
+    font-size:15px;
+}
+
+.hidden-text2 {
+    display: none;
+    font-size:20px;
+    position:relative;
+    font-style:oblique;
+    text-decoration: double;
+    top:53vh;
+    color:rgb(29, 71, 108);
+    left:5vw;
+    transition:font-size 3s ease-in;
+    width:180px;
+}
+
+.hidden-text2:hover{
+    font-size:15px;
+}
+
+.poem{
+    position:absolute;
+            left:51vw;
+            top:24vh;
+    font-size:17px;
+    text-align:center;
+}
+
+
+.writing{
+    position:absolute;
+            left:41vw;
+            top:16vh;
+    font-size:20px;
+
+}
+
+.shake{
+            position:absolute;
+            left:40vw;
+            top:10vh;
+        }
+
+        .shake-detail{
+            border-radius:100px;
+            width:100px;
+            height:100px;
+        }
+
+        .shake-detail:hover{
+            box-shadow:1px 1px 10px white, 10px 5px 50px orangered;
+        }
+
+        .red-detail:hover{
+            box-shadow:1px 1px 10px white, 10px 5px 50px orangered;
+        }
+
+        .photo{
+            position:absolute;
+            left:50vw;
+            top:5vh;
+        }
+
+        .photo-detail{
+            border-radius:100px;
+            width:100px;
+            height:100px;
+        }
+
+        .photo-detail:hover{
+            box-shadow:1px 1px 10px white, 10px 5px 50px orangered;
+        }
+
+        .internship-detail:hover{
+            box-shadow:1px 1px 10px white, 10px 5px 50px orangered;
+        }
+
+        .photography{
+            position:absolute;
+            left:51vw;
+            top:10vh;
+            font-size:15px;
+        }
+
+        .intern{
+            position:absolute;
+            left:43vw;
+            top:30vh;
+            font-size:15px;
+            z-index:10;
+            width:100px;
+        }
+
+        .art{
+            color:white;
+            text-shadow:0 0 20px white;
+            font-weight:bold;
+            font-size:25px;
+        }
+
+        .check{
+            color:red;
+        }
+
+        .b1{
+            position:absolute;
+            top:85vh;
+            left:1vw;
+            width:40px;
+        }
+
+        .b2{
+            position:absolute;
+            top:68vh;
+            left:-14vw;
+            width:40px;
+        }
+
+        .b3{
+            position:absolute;
+            top:77vh;
+            left:-30vw;
+            width:40px;
+        }
+
+        .b4{
+            position:absolute;
+            top:57vh;
+            left:-30vw;
+            width:40px;
+        }
+
+        .b5{
+            position:absolute;
+            top:60vh;
+            left:-5vw;
+            width:40px;
+        }
+
+        .internship-detail{
+            border-radius:100px;
+            width:100px;
+            height:100px;
+            position:absolute;
+            left:42vw;
+            top:25vh;
+        }
+
+        
+        
+
+        </style>
+    </head>
+    <body>
+        
+        <a class="about" href="about.html">
+            about
+        </a>
+
+        <a class="story" href="xuanwu/<xuanwu>.html">
+            xuanwu's kitchen
+        </a>
+
+        <a class="AI" href="https://publuu.com/flip-book/180898/447900">
+            Inside and Beyond
+        </a>
+
+        <a class="Unity" href="https://simmer.io/@ziyou_/variation-yoyo-tang">
+            Variation (Unity Game)
+        </a>
+
+        <a class="multicollage" href="multicollage/Multicollage.html">
+            Agoraphobia
+        </a>
+
+        <a class="p5js" href="p5js.html">
+            p5.js experiments
+        </a>
+
+        <a class="red" href="https://docs.google.com/document/d/1_Uj0qLnzUap0eQpWy1GSnQFMNpr80L5JHzxh76QiBv8/edit?mode=html">
+            <img class="red-detail" src="main/red.gif">
+        </a>
+
+       
+        <div class="container">
+            <p class="explore">explore H<span class="redish">o</span>L<span class="redish">e</span>S for course work</p>
+            <p class="hidden-text">Hover over holes</p>
+            
+          </div>
+
+          <div class="poem" href="https://docs.google.com/document/d/1_Uj0qLnzUap0eQpWy1GSnQFMNpr80L5JHzxh76QiBv8/edit?mode=html">
+            poem (Chinese)
+          </div>
+
+          <a class="shake" href="writing.html">
+            <img class="shake-detail" src="main/shake.gif">
+        </a>
+
+        <div class="writing">
+            writing
+          </div>
+
+          <a class="photo" href="photography.html">
+            <img class="photo-detail" src="main/photography.gif">
+        </a>
+
+        <div class="photography">
+            photography
+        </div>
+
+        <div class="intern">
+            Internship @ 99cloud
+        </div>
+
+        <div class="internship" href="internship.html">
+            <img class="internship-detail" src="main/internship.gif">
+        </div>
+
+
+        <div class="container1">
+            <p class="yoyo"> Yoyo</p>
+            <p class="hidden-text1"><span class="art">I see my English name as a representative of my art</span> </br>repetitive Ys and Os </br> sharp and rounded letters </br> just like my art and writing </br><span class="check">(check course work + circles)</span> </p>
+            
+          </div>
+
+          <div class="container2">
+           <a href="CV.html" class="唐子悠">唐子悠</a>
+           <p class="hidden-text2"><span class="art">I see my Chinese name as a representative of my academics</span> </br>orginated from the book of odes, </br> a name that hints a linger of wood and violet</br><span class="check">(click name to see CV)</span> </p>
+            
+
+        </div>
+
+        <img class="b1" src="main/butterfly.gif">
+        <img class="b2" src="main/butterfly.gif">
+        <img class="b3" src="main/butterfly.gif">
+        <img class="b4" src="main/butterfly.gif">
+        <img class="b5" src="main/butterfly.gif">
+
+        <p class="explore1">look beside butterflies</p>
+
+
+
+    </body>
+
+    <script>
+        const container= document.querySelector('.container');
+container.addEventListener('mouseover', () => {
+  container.classList.add('hovered');
+});
+container.addEventListener('mouseout', () => {
+  container.classList.remove('hovered');
+});
+    </script>
+
+<script>
+    const container= document.querySelector('.container1');
+container.addEventListener('mouseover', () => {
+container.classList.add('hovered');
+container.href='CV.html';
+});
+container.addEventListener('mouseout', () => {
+container.classList.remove('hovered');
+});
+</script>
+
+<script>
+    const textElement = document.querySelector('.container1');
+
+textElement.addEventListener('mouseover', () => {
+  textElement.href = 'CV.html';
+});
+</script>
+</html>
