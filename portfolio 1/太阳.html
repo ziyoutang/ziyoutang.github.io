@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<html>
+    <head>
+    <link rel="icon" href="favicon.PNG" type="image/x-icon">
+</head>
+    <style>
+         body{
+           
+            background-image: url("sun/cool.gif");
+            background-size:cover;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+
+        .naturalsun{
+            position:absolute;
+            left:-100px;
+            top:220px;
+            z-index:-1;
+            height:300px;
+           justify-content: center;
+           cursor: url(myBall.cur),auto;
+            
+        }
+
+        .stairs{
+            position:absolute;
+            left:-600px;
+            top:300px;
+        }
+
+        .stairs:hover{
+            filter:invert(100%);
+        }
+
+        #trees{
+            position:absolute;
+            left:-600px;
+            height:570px;
+            z-index:-3;
+
+        }
+
+        .taiyang{
+            font-size:23px;
+            color:white;
+            text-align:right;
+            position:absolute;
+            top:380px;
+            right:-300px;
+
+        }
+
+        #video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.thirtysec{
+    font-size:60px;
+    color:red;
+    transition: font-size 0.5s ease-out;
+    transition: text-shadow 0.5s ease-out, color 1s ease-in-out;
+    text-decoration:none;
+    text-shadow:0 0 5px rgb(170, 255, 0);
+
+}
+
+.naturalsun:hover{
+    filter:blur(5px);
+    filter:invert(100%)
+}
+
+.thirtysec:hover{
+    font-size:70px;
+    text-shadow:0 0 10px rgba(255, 255, 255, 0.652);  
+    text-shadow:0 0 50px rgb(153, 255, 0)
+    
+}
+
+.zha{
+    color:red;
+    text-shadow:0 0 5px rgb(170, 255, 0);
+    font-size:40px;
+}
+
+
+.new-element {
+  display: none;
+}
+
+.rock{
+    height:200px;
+    position:absolute;
+    right:-100px;
+    top:50px;
+    color:white;
+}
+
+.bullet{
+    height:100px;
+    position:absolute;
+    top:450px;
+    right:300px;
+
+
+}
+
+#man1{
+    height:250px;
+    position:absolute;
+    top:500px;
+    left:-200px;
+    cursor:pointer;
+}
+
+#man2{
+    height:150px;
+    position:absolute;
+    top:500px;
+    left:-200px;
+    cursor:pointer;
+        display:none;
+}
+
+#man3{
+    height:50px;
+    position:absolute;
+    top:470px;
+    left:200px;
+    cursor:pointer;
+        display:none;
+}
+
+
+
+.zai{
+    transition: letter-spacing 1s ease-in-out;
+}
+
+.zai:hover{
+    letter-spacing: 4vw;
+}
+
+.white{
+    cursor:pointer;
+        display:none;
+        height:170px;
+        position:absolute;
+        top:550px;
+        right:-150px;
+        z-index:-10;
+
+}
+
+.click{
+    font-size:15px;
+    color:white;
+    position:absolute;
+    bottom:-45vh;
+    right:50vw;
+    z-index:3000;
+    width:200px;
+
+}
+
+
+    </style>
+
+    <body>
+
+        <img class="naturalsun" src="sun/naturalsun.png">
+
+        <a href="猫和茧.html">
+            <img class="stairs" src="sun/stairs.png"></a>
+
+        <p class="taiyang"><a class="thirtysec" href="30sec.html">30秒</a></br>
+            嘭</br>
+            我又醒了</br>
+            不</br>
+            我想我死了</br>
+            <span class="zai">在<span class="zha">炸死</span></span>我的那一刻</br>
+            太阳竟透出了粉霞</br>
+            </p>
+
+         <p class="rock">
+            嘭
+            </p>
+
+        <img class="bullet" src="sun/bullet.png">
+        <div class="click">Click stairs to hide</div>
+
+       <img id="man1" src="sun/man.png">
+       <img id="man2" src="sun/sit.png">
+       <img id="man3" src="sun/down.png">
+
+              
+       <img id="trees" img src="sun/trees.png" onclick="audio.play();">
+       <img class="white" src="sun/white.PNG">
+    
+       <script type="text/javascript">
+         const audio = new Audio();
+         audio.src = "sun/liminal.mp3";
+       </script>
+
+    
+
+    </body>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="taiyang.js"></script>
+
+    <script>
+        const triggerElement = document.querySelector('.naturalsun');
+const newElement = document.querySelector('.rock');
+const newElement1 = document.querySelector ('.bullet');
+
+triggerElement.addEventListener('mouseenter', function() {
+newElement.style.display = 'block';
+newElement1.style.display = 'block';
+});
+
+triggerElement.addEventListener('mouseleave', function() {
+newElement.style.display = 'none';
+newElement1.style.display = 'none';
+});
+
+
+
+
+    </script>
+
+
+<script>
+    const triggerElement1 = document.querySelector('.zha');
+const newElement2 = document.querySelector('.white');
+
+triggerElement1.addEventListener('mouseenter', function() {
+newElement2.style.display = 'block';
+});
+
+triggerElement1.addEventListener('mouseleave', function() {
+newElement2.style.display = 'none';
+});
+
+
+
+
+</script>
+</html>

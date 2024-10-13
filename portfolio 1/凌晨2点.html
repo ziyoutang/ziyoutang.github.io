@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<html>
+    <style>
+
+body{
+           
+           background-image: url("two/car.jpg");
+           background-position:30px;
+           background-position-y: -1030px;
+           background-size:cover;
+           padding:0;
+           margin:0;
+           font-size: 5vw;
+           width: 1vw;
+           left: 25vw;
+           position:fixed;
+           z-index:-1;
+       }
+
+.dui{
+    font-size:20px;
+}
+
+.all{
+    color:white;
+    font-size:15px;
+    width:300px;
+    position:absolute;
+    left:750px;
+    top:500px;
+    line-height: 45px;
+}
+
+.cheng{
+    color:orange;
+    transition:
+    font-size 0.5s ease-in-out, 
+    text-shadow 0.5s ease-in-out;
+}
+
+.cheng:hover{
+    font-size:60px;
+    text-shadow:0 0 20px rgb(255, 0, 0);
+}
+
+.deng{
+    cursor:pointer;
+        display:none;
+        height:170px;
+        position:absolute;
+        top:550px;
+        right:-150px;
+        z-index:-10;
+
+}
+
+.dengliang{
+    color:rgb(254, 237, 141);
+    font-size: 30px;
+    text-shadow:0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+    cursor:pointer;
+}
+
+.di{
+    position:absolute;
+    top:10px;
+    font-stretch:expanded;
+    font-style: italic;
+}
+
+.de{
+    padding-left:45px;
+}
+
+.hei{
+    color:black;
+    text-shadow:0 0 5px rgb(255, 255, 255), 0 0 5px rgb(255, 255, 255);
+    font-size:30px;
+    padding-top:90px;
+    cursor:pointer;
+
+}
+
+.second{
+    padding-top:30px;
+}
+
+.finger{
+    height:250px;
+    position:absolute;
+    top:-60px;
+    left:370px;
+    transform:scaleX(-1);
+    transform:rotate(-200deg);
+    transition:filter 10s ease-in;
+}
+
+.finger:hover{
+    filter:brightness(40);
+}
+
+.finger2{
+    height:300px;
+    filter:invert(30);
+    position:absolute;
+    top:500px;
+    left:200px;
+    transform:scaleX(-1);
+    transform:rotate(50deg);
+}
+
+.finger2:hover{
+    opacity:60%;
+}
+
+#player{
+    height:200px;
+    position:absolute;
+    top:440px;
+    left:-40px;
+    transform:rotate(-5deg);
+    cursor:pointer;
+    z-index:100;
+    transition: height 0.5s ease-out;
+}
+
+#player:hover{
+    height:220px;
+}
+
+
+.lamp{
+    position:absolute;
+    height:300px;
+    top:50px;
+    left:40px;
+    display:none;
+}
+
+.click{
+    font-size:15px;
+    color:white;
+    position:absolute;
+    right:-64vw;
+    z-index:30000;
+    width:200px;
+
+}
+
+
+
+
+
+
+
+    </style>
+    <body>
+
+        <p class="all">
+          <span class="dui">对面的<span class="dengliang">灯</span>亮着<span class="di">低沉</span><span class="de">的</span><span class="cheng">橙</br></span></span><span class="second">一个纤细的<span class="hei">黑影</span>在朗读着明天的播报</br></span>手指肆意挥舞</br>却满是A4纸留下的红印</br>
+        </p>
+
+        <img class="lamp" src="two/lamp.png">
+        <img class="shadow" src="">
+        <a href="都市酒店.html"><img class="finger" src="two/hand.PNG"></a>
+        <img class="finger2" src="two/hand.PNG">
+        <img id="player" src="two/player.PNG" onclick="audio.play();">
+        <div class="click">burning hand is the key to imaginations</div>
+
+    
+        
+
+    </body>
+
+    <script type="text/javascript" class="music">
+        const audio = new Audio();
+        audio.src = "two/cute.mp3";
+      </script>
+
+    <script>
+        const triggerElement1 = document.querySelector('.hei');
+    const newElement2 = document.querySelector('.white');
+    
+    triggerElement1.addEventListener('mouseenter', function() {
+    newElement2.style.display = 'block';
+    });
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+    <script>
+        const div =document.querySelector(".text");
+    </script>
+
+<script>
+    const triggerElement = document.querySelector('.dengliang');
+const newElement = document.querySelector('.lamp');
+
+triggerElement.addEventListener('mouseenter', function() {
+newElement.style.display = 'block';
+});
+
+triggerElement.addEventListener('mouseleave', function() {
+newElement.style.display = 'none';
+});
+
+
+const photos = document.querySelectorAll('.player');
+
+photos.forEach(photo => {
+  photo.addEventListener('click', function() {
+    // Remove the 'hide' class from the clicked photo
+    this.classList.remove('hide');
+    
+    // Add the 'hide' class to all other photos
+    photos.forEach(otherPhoto => {
+      if (otherPhoto !== this) {
+        otherPhoto.classList.add('hide');
+      }
+    });
+  });
+});
+
+
+
+</script>
+
+<script>
+    const music = document.getElementsByClassName('music');
+const catImage = document.getElementsByClassName('finger');
+const dogImage = document.getElementsByClassName('dog-image');
+
+music.addEventListener('play', function() {
+  catImage.classList.add('hide-image');
+  dogImage.classList.add('hide-image');
+});
+</script>
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+         body{
+            color:azure;
+            background-image: url("about/about.gif");
+            background-size:cover;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+
+        .ziyou{
+            position:relative;
+            top:47vh;
+            left:38vw;
+            width:270px;
+            filter: drop-shadow(8px 8px 10px aqua);
+            border-radius:10px;
+        }
+
+        .info{
+            width:1000px;
+            font-size:20px;
+            position:relative;
+            top:30vh;
+            color:darkblue;
+            left:-30vw;
+        }
+
+        .name{
+            font-weight:bold;
+            cursor:pointer;
+        }
+
+        .name:hover{
+            color:orange;
+            font-size:30px;
+        }
+
+        .China{
+            border-radius:100px;
+            width:50px;
+            height:50px;
+            position:relative;
+            top:12vh;
+            left:-20vw;
+        }
+
+        .hk{
+            border-radius:100px;
+            width:50px;
+            height:50px;
+            position:relative;
+            top:12vh;
+            left:-20vw;
+        }
+
+
+    .back{
+        font-size:25px;
+        position:relative;
+        top:-18vh;
+        right:-35vw;
+        background-color:white;
+        padding:10px;
+        opacity:0.6;
+    }
+
+    .back:hover{
+        opacity:1;
+    }
+
+
+    .home-detail{
+    height:100px;
+    position:relative;
+    left:43vw;
+    top:-10vh;
+    z-index:1000;
+}
+
+.home-detail:hover{
+    filter: invert(100%);
+}
+
+
+.thumb {
+            width: 300px; height: 180px; margin: 70px auto;
+            perspective: 1000px;
+            position:absolute;
+            top:315px;
+            left:550px;
+            rotate:2deg;
+            filter: drop-shadow(8px 8px 10px aqua);
+        }
+        .thumb a {
+            display: block; width: 100%; height: 100%;
+            /*double layered BG for lighting effect*/
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url("about/ziyou.png");
+            /*disabling the translucent black bg on the main image*/
+            background-size: 0, cover;
+            /*3d space for children*/
+            transform-style: preserve-3d;
+            transition: all 0.5s;
+        }
+        .thumb:hover a {transform: rotateX(80deg); transform-origin: bottom;}
+        /*bottom surface */
+        .thumb a:after {
+            /*36px high element positioned at the bottom of the image*/
+            content: ''; position: absolute; left: 0; bottom: 0; 
+            width: 100%; height: 36px;
+            /*inherit the main BG*/
+            background: inherit; background-size: cover, cover;
+            /*draw the BG bottom up*/
+            background-position: bottom;
+            /*rotate the surface 90deg on the bottom axis*/
+            transform: rotateX(90deg); transform-origin: bottom;
+        }
+        /*label style*/
+        .thumb a span {
+            color: white; 
+            position: absolute; top: 100%; left: 0; width: 100%;
+            font: bold 9px/36px Courier; text-align: center;
+            /*the rotation is a bit less than the bottom surface to avoid flickering*/
+            transform: rotateX(-89.99deg); transform-origin: top;
+            z-index: 1;
+        }
+        /*shadow*/
+        .thumb a:before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+            transition: all 0.5s; 
+            /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+            opacity: 0.15;
+            transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+            transform-origin: bottom;
+        }
+        .thumb:hover a:before {
+            opacity: 1;
+            /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+            box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+            /*pushing the shadow down and scaling it down to size*/
+            transform: rotateX(0) translateZ(-60px) scale(0.85);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="info">
+    <span class="name">yoyo tang </span></br>
+</br>
+hk ~ pek </br>
+</br>   
+rising junior </br>
+    ux design-film-performance art-digital art
+</div>
+
+<img class="China" src="about/china.webp">
+<img class="hk" src="about/hk.png">
+
+ <a class="home" href="Portfolio-main.html">
+    <img class="home-detail" src="house.webp">
+</a>
+
+<div class="thumb">
+	<!-- Image -->
+	<a href="cyberpunk.html">
+		<!-- Label -->
+        <span>Me in my bedroom</span>
+	</a>
+</div>
+   
+
+
+</body>
+
+
+
+</html>

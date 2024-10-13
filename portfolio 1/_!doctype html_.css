@@ -1,0 +1,478 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>四丨「我...」</title>
+    <style>
+      #one {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        cursor:pointer;
+      }
+      #two {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #three {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #four {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #five {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #six {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #seven {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #eight {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #nine {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #ten {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #eleven {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #twelve {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #thirteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #fourteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #fifteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #sixteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #seventeen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #eighteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #nineteen {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #twenty {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tone {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #ttwo {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tthree {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tfour {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tfive {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tsix {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+      #tseven {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:1;
+        display:none;
+        cursor:pointer;
+      }
+
+      #run {
+        position: fixed;
+        top: 0vh;
+        left: 0vw;
+        width: 100%;
+        opacity: 1;
+        z-index:8;
+        display:none;
+        cursor:auto;
+      }
+
+      #lotus{
+        position: fixed;
+        top: 4vh;
+        left:2vw;
+        width: 7%;
+        opacity: 1;
+        z-index:10;
+        cursor:pointer;
+      }
+      #lotus:hover{
+        position: fixed;
+        top: 4vh;
+        left:2vw;
+        width: 7.5%;
+        opacity: 1;
+        z-index:10;
+        cursor:pointer;
+      }
+      #source{
+        position: fixed;
+        bottom: 3vh;
+        right:3vw;
+
+        opacity: 1;
+        z-index:10;
+        color:white;
+      }
+      #door {
+        position: fixed;
+        top: 38.7vh;
+        left: 5.9vw;
+        width: 13%;
+        opacity: 1;
+        z-index:9;
+display:none;
+        cursor:pointer;
+      }
+      #doorgif {
+        position: fixed;
+        top: 38vh;
+        left: 5.5vw;
+        width: 15%;
+        opacity: 1;
+        z-index:10;
+        cursor:auto;
+      }
+      #green {
+        position: fixed;
+        top: 27.6vh;
+        left: 64.5vw;
+        width: 11%;
+        opacity: 1;
+        z-index:9;
+display:none;
+        cursor:pointer;
+      }
+      #greengif {
+        position: fixed;
+        top: 27.6vh;
+        left: 64.5vw;
+        width: 11%;
+        opacity: 1;
+        z-index:10;
+        cursor:auto;
+      }
+      #record {
+        position: fixed;
+        top: 10vh;
+        left: 19vw;
+        width: 14%;
+        opacity: 1;
+        z-index:9;
+display:none;
+        cursor:pointer;
+      }
+      #recordgif {
+        position: fixed;
+        top: 10vh;
+        left: 19vw;
+        width: 14%;
+        opacity: 1;
+        z-index:10;
+        cursor:auto;
+      }
+      #guitar {
+        position: fixed;
+        top: 12.5vh;
+        left: 81.5vw;
+        width: 11.6%;
+        opacity: 1;
+        z-index:9;
+display:none;
+        cursor:pointer;
+      }
+      #guitargif {
+        position: fixed;
+        top: 12.5vh;
+        left: 81.5vw;
+        width: 11.6%;
+        opacity: 1;
+        z-index:10;
+        cursor:auto;
+      }
+      #closet {
+        position: fixed;
+        top: 68.3vh;
+        left: 34.3vw;
+        width: 11.3%;
+        opacity: 1;
+        z-index:9;
+display:none;
+        cursor:pointer;
+      }
+      #closetgif {
+        position: fixed;
+        top: 68.3vh;
+        left: 34.3vw;
+        width: 11.3%;
+        opacity: 1;
+        z-index:10;
+        cursor:auto;
+      }
+      #lyrics {
+        position: fixed;
+        top:32vh;
+        left:24vw;
+        width: 17%;
+        opacity: 1;
+        z-index:10;
+        display:none;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script src="04tomorrow.js"></script>
+  </head>
+  <body>
+    <a href=home.html><img id=lotus img src="04tomorrow/lotus.png"></a>
+    <img id=one img src="04tomorrow/1.png">
+    <img id=two img src="04tomorrow/2.png">
+    <img id=three img src="04tomorrow/3.png">
+    <img id=four img src="04tomorrow/4.png">
+    <img id=five img src="04tomorrow/5.png">
+    <img id=six img src="04tomorrow/6.png">
+    <img id=seven img src="04tomorrow/7.png">
+    <img id=eight img src="04tomorrow/8.png">
+    <img id=nine img src="04tomorrow/9.png">
+    <img id=ten img src="04tomorrow/10.png">
+    <img id=eleven img src="04tomorrow/11.png">
+    <img id=twelve img src="04tomorrow/12.png">
+    <img id=thirteen img src="04tomorrow/13.png">
+    <img id=fourteen img src="04tomorrow/14.png">
+    <img id=fifteen img src="04tomorrow/15.png">
+    <img id=sixteen img src="04tomorrow/16.png">
+    <img id=seventeen img src="04tomorrow/17.png">
+    <img id=eighteen img src="04tomorrow/18.png">
+    <img id=nineteen img src="04tomorrow/19.png">
+    <img id=twenty img src="04tomorrow/20.png">
+    <img id=tone img src="04tomorrow/21.png">
+    <img id=ttwo img src="04tomorrow/22.png">
+    <img id=tthree img src="04tomorrow/23.png">
+    <img id=tfour img src="04tomorrow/24.png">
+    <img id=tfive img src="04tomorrow/25.png">
+    <img id=tsix img src="04tomorrow/26.png">
+    <img id=tseven img src="04tomorrow/27.png">
+    <img id=run img src="04tomorrow/run.gif">
+    <div id=source>图片翻拍自 阿信《摇滚诗的诞生与转生》</div>
+
+    <img id="green" img src="04tomorrow/green.png" >
+    <img id="greengif" img src="04tomorrow/green.gif" hidden>
+    <audio id="greensound" src="04tomorrow/green.mp3"></audio>
+
+    <img id=record img src="04tomorrow/record.jpg" onclick="audio1.play();">
+    <img id=recordgif img src="04tomorrow/record.gif" hidden>
+    <audio id="recordsound" src="04tomorrow/record.mp3"></audio>
+
+    <img id=closet img src="04tomorrow/closet.jpg" onclick="audio2.play();" >
+    <img id=closetgif img src="04tomorrow/closet.gif" hidden>
+    <audio id="closetsound" src="04tomorrow/closet.mp3"></audio>
+
+    <img id=door img src="04tomorrow/door.png" onclick="audio3.play();">
+    <img id=doorgif img src="04tomorrow/door.gif" hidden>
+    <audio id="doorsound" src="04tomorrow/door.mp3"></audio>
+
+    <img id=guitar img src="04tomorrow/guitar.jpg" onclick="audio4.play();">
+    <img id=guitargif img src="04tomorrow/guitar.gif" hidden>
+    <audio id="guitarsound" src="04tomorrow/guitar.mp3"></audio>
+
+    <img id=lyrics img src="04tomorrow/lyrics.png">
+  </body>
+</html>

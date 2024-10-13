@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                background-image:url(collage/sun.gif);
+                background-image:url(collage/sun.gif);
+            background-size:cover;
+            height: 90vh;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+
+        .poll{
+            position:absolute;
+            left:-200px;
+            top:300px;
+
+        }
+
+        .poll1{
+            position:absolute;
+            left:370px;
+            top:100px;
+
+        }
+
+        .poll3{
+            position:absolute;
+            left:180px;
+            top:400px;
+
+        }
+
+        .window-detail{
+            height:360px;
+        }
+
+        .poll-detail{
+            height:300px;
+            width:300px;
+            position:absolute;
+            left:-200px;
+        }
+
+        .ball-detail{
+            height:300px;
+            width:300px;
+            position:absolute;
+            left:350px;
+            top:60px;
+        }
+
+        .poll-detail, 
+        .window-detail,
+        .ball-detail,
+        .future-detail{
+            transition:opacity 0.5s ease-out;
+        }
+
+        .poll-detail:hover{
+            opacity:0.4;
+        }
+
+        .window-detail:hover{
+            opacity:0.4;
+        }
+
+        .ball-detail:hover{
+            opacity:0.4;
+        }
+
+        .future-detail:hover{
+            opacity:0.4;
+        }
+
+        .poll-text{
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+            font-size:15px;
+            font-weight:bold;
+            width:240px;
+            position:relative;
+            left:-180px;
+            top:200px;
+            opacity:0;
+            transition: opacity 0.3s ease;
+
+        }
+
+        .poll-text1{
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+            font-size:15px;
+            font-weight:bold;
+            width:240px;
+            position:relative;
+            left:400px;
+            top:-280px;
+            opacity:0;
+            transition: opacity 0.3s ease;
+
+        }
+
+        .poll-text2{
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+            font-size:15px;
+            font-weight:bold;
+            width:80px;
+            position:relative;
+            left:20px;
+            top:-400px;
+            opacity:1;
+            transition: opacity 0.3s ease;
+
+        }
+
+        .poll-text3{
+            color:white;
+            font-family:'Courier New', Courier, monospace;
+            font-size:15px;
+            font-weight:bold;
+            width:400px;
+            position:relative;
+            left:160px;
+            top:-180px;
+            opacity:1;
+            transition: opacity 0.3s ease;
+            white-space:pre-wrap;
+            line-height: 30px;
+            font-family:'新細明體';
+
+        }
+
+
+        #image-container{
+            position:absolute;
+            left:-300px;
+        }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="poll2">
+            <img class="future-detail" src="collage/future.gif">
+        </div>
+        <div class="poll3">
+            <img class="window-detail" src="collage/window.gif">
+        </div>
+
+        <div class="image-container">
+            <img class="poll-detail" src="collage/poll.gif">
+            <p class="poll-text">
+                That shouldn’t be happening. As the ladies said,  your eyes are the least swollen at night. 
+            </p>
+        </div>
+
+        <div class="image-container1">
+            <img class="ball-detail" src="collage/ball.gif">
+            <p class="poll-text1">
+                beauty is a hypocritical word.
+            </p>
+        </div>
+
+        <p class="poll-text2"> She was compassionate enough to leave him a red poppy, yet he muddled a few incomprehensible words.</p>
+        <p class="poll-text3">
+            我在都市酒店坐落的地方仰视 
+            仰视着那极不自然的明灯
+            里面装着领带泛黄
+            染着咖啡酸臭的人们
+            伪造出繁忙的姿态
+            为自己赚下半杯白沫的啤酒
+            </p>
+        
+        
+
+    </body>
+
+    <script>
+        var imageContainer = document.querySelector(".image-container");
+        imageContainer.addEventListener("mouseenter", function() {
+          var imageText = this.querySelector(".poll-text");
+          imageText.style.opacity = 1;
+        });
+        imageContainer.addEventListener("mouseleave", function() {
+          var imageText = this.querySelector(".poll-text");
+          imageText.style.opacity = 0;
+        });
+    </script>
+
+<script>
+    var imageContainer = document.querySelector(".image-container1");
+    imageContainer.addEventListener("mouseenter", function() {
+      var imageText = this.querySelector(".poll-text1");
+      imageText.style.opacity = 1;
+    });
+    imageContainer.addEventListener("mouseleave", function() {
+      var imageText = this.querySelector(".poll-text1");
+      imageText.style.opacity = 0;
+    });
+</script>
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="favicon.PNG" type="image/x-icon">
+    <link href='https://fonts.googleapis.com/css?family=Lusitana' rel='stylesheet'>
+</head>
+    <style>
+body{
+    background-color: #2c2c2c;
+    background-size:cover;
+    opacity:100%;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+
+.slideshow-container {
+    background-color: #2c2c2c;
+    position:absolute;
+    top:80px;
+  max-width: 450px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  left:140px;
+  width: 100%;
+  text-align: right;
+}
+
+.title{
+    position:absolute;
+    top:50px;
+    right:650px;
+    width:1000px;
+}
+
+.title1{
+    position:absolute;
+    top:50px;
+    right:620px;
+    width:1000px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+
+.home-detail{
+    height:70px;
+    position:absolute;
+    left:85vw;
+    top:10vh;
+    z-index:13000;
+}
+
+.home-detail:hover{
+    filter: invert(100%);
+}
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+    </style>
+    <body>
+
+        <a class="home" href="index.html">
+            <img class="home-detail" src="house.webp">
+          </a>
+
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 12</div>
+              <img src="modelling/computer.PNG" style="width:100%">
+              <div class="text"><span class="title">The Herd: Practice Installation</span></br>
+                Nomad 3D Sculpt</br>
+                2023</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 12</div>
+              <img src="modelling/cloth.png" style="width:100%">
+              <div class="text"><span class="title">Modelling for "window" #1</span></br>Nomad 3D Sculpt</br>Make Human</br>2024</div>
+            </div>
+          
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 12</div>
+              <img src="modelling/chindogu.png" style="width:100%">
+              <div class="text"><span class="title">texture exploration </span></br>Nomad 3D Sculpt</br>2023</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 12</div>
+                <img src="modelling/design.PNG" style="width:100%">
+                <div class="text"><span class="title1">Modelling for IBDP Design Tech IA</span></br>Nomad 3D Sculpt</br>2024</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">5 / 12</div>
+                <img src="modelling/first.png" style="width:100%">
+                <div class="text"><span class="title">Modelling for "news report"</span></br>Nomad 3D Sculpt</br>2024</div>
+              </div>
+
+              <div class="mySlides fade">
+                <div class="numbertext">6 / 12</div>
+                <img src="modelling/green.png" style="width:100%">
+                <div class="text"><span class="title">Modelling for "poke"</span></br>Nomad 3D Sculpt</br>2024</div>
+              </div>
+
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">7 / 12</div>
+                <img src="modelling/middle.jpeg" style="width:100%">
+                <div class="text"><span class="title">Modelling for "window" #2</span></br>Nomad 3D Sculpt</br>2024</div>
+              </div>
+
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">8 / 12</div>
+                <img src="modelling/poet.jpeg" style="width:100%">
+                <div class="text"><span class="title">Modelling for "the poet's diary"</span></br>Nomad 3D Sculpt</br>2024</div>
+    
+              </div>
+
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">9 / 12</div>
+                <img src="modelling/set.jpeg" style="width:100%">
+                <div class="text"><span class="title">Modelling and Form Exploration </span></br>Nomad 3D Sculpt</br>2023</div>
+    
+              </div>
+              
+
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">10 / 12</div>
+                <img src="modelling/tree.png" style="width:100%">
+                <div class="text"><span class="title">The Herd: Final Installation Set</span></br>Nomad 3D Sculpt</br>2023</div>
+    
+              </div>
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">11 / 12</div>
+                <img src="modelling/sketchup.png" style="width:100%">
+                <div class="text"><span class="title">Modelling for MYP Design Portfolio</span></br>Sketch Up</br>2022</div>
+    
+              </div>
+
+
+              <div class="mySlides fade">
+                <div class="numbertext">12 / 12</div>
+                <img src="modelling/flatpack.png" style="width:100%">
+                <div class="text"><span class="title">Modelling for DP Design Portfolio</span></br>Fusion 360</br>2023</div>
+    
+              </div>
+          
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+
+    </body>
+
+
+    <script>
+       let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+    </script>
+</html>

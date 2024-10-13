@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        
+        body{
+            color:azure;
+            background-image: url("collage/backdrop.png");
+            background-size:cover;
+            height: 90vh;
+            padding:0;
+            margin:0;
+            font-size: 5vw;
+            width: 40vw;
+            left: 35vw;
+            position:fixed;
+        }
+
+        .thumb {
+            width: 300px; height: 200px; margin: 70px auto;
+            perspective: 1000px;
+            position:absolute;
+            top:270px;
+            left:-400px;
+        }
+        .thumb a {
+            display: block; width: 100%; height: 100%;
+            /*double layered BG for lighting effect*/
+            background: 
+                linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url("collage/black.jpg");
+            /*disabling the translucent black bg on the main image*/
+            background-size: 0, cover;
+            /*3d space for children*/
+            transform-style: preserve-3d;
+            transition: all 0.5s;
+        }
+        .thumb:hover a {transform: rotateX(80deg); transform-origin: bottom;}
+        /*bottom surface */
+        .thumb a:after {
+            /*36px high element positioned at the bottom of the image*/
+            content: ''; position: absolute; left: 0; bottom: 0; 
+            width: 100%; height: 36px;
+            /*inherit the main BG*/
+            background: inherit; background-size: cover, cover;
+            /*draw the BG bottom up*/
+            background-position: bottom;
+            /*rotate the surface 90deg on the bottom axis*/
+            transform: rotateX(90deg); transform-origin: bottom;
+        }
+        /*label style*/
+        .thumb a span {
+            color: white; 
+            position: absolute; top: 100%; left: 0; width: 100%;
+            font: bold 9px/36px Courier; text-align: center;
+            /*the rotation is a bit less than the bottom surface to avoid flickering*/
+            transform: rotateX(-89.99deg); transform-origin: top;
+            z-index: 1;
+        }
+        /*shadow*/
+        .thumb a:before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+            box-shadow: 0 0 100px 50px rgba(0, 0, 0, 0.5);
+            transition: all 0.5s; 
+            /*by default the shadow will be almost flat, very transparent, scaled down with a large blur*/
+            opacity: 0.15;
+            transform: rotateX(95deg) translateZ(-80px) scale(0.75);
+            transform-origin: bottom;
+        }
+        .thumb:hover a:before {
+            opacity: 1;
+            /*blurred effect using box shadow as filter: blur is not supported in all browsers*/
+            box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.5);
+            /*pushing the shadow down and scaling it down to size*/
+            transform: rotateX(0) translateZ(-60px) scale(0.85);
+        }
+
+        .gone{
+            position:absolute;
+            top:270px;
+            left:-365px;
+            z-index:-100;
+            width: 240px; height: 140px; margin: 70px auto;
+        }
+
+        .darkness{
+            font-size:20px;
+            position:absolute;
+            right:-340px;
+            top:400px;
+            color:white;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .darkness1{
+            font-size:20px;
+            position:absolute;
+            right:-340px;
+            top:450px;
+            color:white;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+
+        .darkness2{
+            font-size:20px;
+            position:absolute;
+            right:-340px;
+            top:500px;
+            color:white;
+            opacity:0;
+            transition: opacity 0.5s ease-in;
+        }
+
+
+        .darkness:hover{
+            opacity:1;
+        }
+
+        .darkness1:hover{
+            opacity:1;
+        }
+
+        .darkness2:hover{
+            opacity:1;
+        }
+
+        .trace{
+            font-size:20px;
+            position:absolute;
+            right:-340px;
+            top:180px;
+        }
+
+        .down{ 
+            font-size:20px;
+            position:absolute;
+            right:-340px;
+            top:210px;
+        }
+
+        .poem{
+            position:relative;
+            top:500px;
+            height:80px;
+            width:200px;
+            left:400px;
+            transition:height 0.5s, width 0.5s;
+        }
+
+        .poem:hover{
+            height:200px;
+            width:500px;
+
+        }
+
+        .circle{
+            position:fixed;
+            top:450px;
+            height:150px;
+            width:200px;
+            left:800px;
+            z-index:-1000;
+        }
+
+        .Shape{
+            font-size:20px;
+            position:absolute;
+            top:400px;
+            right:1050px;
+
+        }
+
+        </style>
+    </head>
+
+    <body>
+<div class="thumb">
+	<!-- Image -->
+	<a href="cyberpunk.html">
+		<!-- Label -->
+		<span>It's a sin to look back upon the crossroad of noah</span>
+	</a>
+</div>
+    <img class="gone" src="collage/gone.gif">
+    <a class="darkness" href="darkness.html">Into the darkness</a>
+    <a class="darkness1" href="darkness.html">Into the darkness</a>
+    <a class="darkness2" href="darkness.html">Into the darkness</a>
+    <p class="trace">trace among door line</p>
+    <p class="down">(downwards)</p>
+    <img class="poem" src="collage/poem.png">
+    <img class="circle" src="collage/circle.jpg">
+    <p class="Shape">Click 3D shape</p>
+    </body>
+</html>

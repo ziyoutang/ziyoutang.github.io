@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<html>
+    <style>
+
+
+.background-video {
+    background-size:cover;
+            scale:60%;
+  z-index: 2;
+  position:fixed;
+  left:100px;
+  top:-250px;
+}
+
+.text{
+    position:fixed;
+    top:200px;
+    z-index:10;
+    color:white;
+    left:80px;
+    font-size: 20px;
+    line-height:220%;
+
+    
+}
+
+.black{
+    position:fixed;
+    scale:160%;
+    width:1500px;
+}
+
+
+.emeng{
+    font-size:60px;
+}
+
+.sheep{
+    z-index:100;
+    position:absolute;
+    right:20vw;
+    bottom:10vh;
+    height:20vh;
+}
+
+.sheep1{
+    z-index:100;
+    position:absolute;
+    left:20vw;
+    bottom:10vh;
+    height:20vh;
+    transform: rotateY(180deg);
+}
+
+#man1{
+    height:150px;
+    position:absolute;
+    top:400px;
+    right:200px;
+    cursor:pointer;
+    z-index:20;
+}
+
+
+#man2{
+    height:150px;
+    position:absolute;
+    top:600px;
+    left:700px;
+    cursor:pointer;
+        display:none;
+        z-index:20;
+}
+
+#man3{
+    height:200px;
+    position:absolute;
+    top:300px;
+    left:350px;
+    cursor:pointer;
+        display:none;
+        z-index:20;
+}
+
+#man4{
+    height:150px;
+    position:absolute;
+    top:500px;
+    right:400px;
+    cursor:pointer;
+        display:none;
+        z-index:20;
+}
+#man5{
+    height:150px;
+    position:absolute;
+    top:500px;
+    left:400px;
+    transform: rotateY(180deg);
+    cursor:pointer;
+        display:none;
+        z-index:20;
+}
+
+.travel{
+    color:white;
+    z-index:10000;
+    font-size:2vh;
+    position:fixed;
+    top:35vh;
+    left:46vw;
+    opacity:0;
+    transition:opacity 2s ease-in;
+}
+
+.travel:hover{
+    opacity:100;
+    text-shadow:0 0 5px rgb(255, 63, 63);
+}
+
+.click{font-size:15px;
+    color:white;
+    position:absolute;
+    top:62vh;
+    left:30vw;
+    z-index:30000;
+    width:200px;
+
+}
+
+</style>
+
+
+
+<body>
+    <div class="text">
+        如果能讓我做一場  <span class="emeng">噩           夢</span> </br>
+        夢一場荒謬的神道儀式</br>
+        我將把羔羊送至上帝的手中</br>
+        獻上最真摯的仰慕之情</br>
+        
+
+    </div>
+
+    <a  href="披头士.html" class="travel"> to the 80s </a>
+
+    <img class="black" src="person/black.jpeg">
+    <img class="sheep" src="person/sheep.png">
+    <img class="sheep1" src="person/sheep.png">
+
+
+    <img id="man1" src="person/downfar.PNG">
+    <img id="man2" src="person/down.PNG">
+    <img id="man3" src="person/upfar.PNG">
+    <img id="man4" src="person/upclose.PNG">
+    <img id="man5" src="person/upclose.PNG">
+    <div class="click">hover over her broken neck</div>
+
+
+
+
+    <div class="background-video">
+        <video autoplay muted loop>
+          <source src="person/person.mp4" type="video/mp4">
+        </video>
+      </div>
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+      <script src="emeng.js"></script>
+
+</body>

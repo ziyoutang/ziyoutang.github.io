@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="OralO.png" />
+    <style media="screen">
+      body {
+         user-select: none;
+         min-width: 1200px;
+         line-height:70px;
+         margin-top:-30px;
+      }
+      #type, #display, #record{
+         width:90%;
+         height:40%;
+         margin:5%;
+         font-family:cursive;
+
+      }
+      #type, #display
+      {
+        font-size:25px;
+
+      }
+      #display.erase {
+        word-break: break-all;
+      }
+      #record {
+        font-size:32px;
+        line-height:80px;
+      }
+      #display span {
+        margin-left:20px;
+      }
+      #type {
+        color:grey;
+      }
+      #left, #right {
+        width:75%;
+        font-size:36px;
+      }
+      #left span, #right span{
+        display: inherit;
+        line-height: 5px;
+        margin:0 !important;
+        color:black;
+        -webkit-transition: line-height 7s ease-in, font-size 7s ease-in;
+        transition: line-height 7s ease-in, font-size 7s ease-in;
+      }
+      #display.expand #left span, #display.expand #right span{
+        line-height: 36px;
+        font-size: 48px;
+      }
+
+      @keyframes fadeOut {
+        from {color:black;}
+        to {color:white;}
+      }
+
+      #left {
+        float:left;
+        margin-left: -25%;
+        text-align: right;
+      }
+      #right {
+        margin-left: 52%;
+      }
+      .final {
+        margin: 0 !important;
+        animation-name: fadeOut;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        -webkit-animation-name: fadeOut; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 2s;
+      }
+      .blur {
+         color: transparent;
+         text-shadow: 0 0 40px rgba(0,0,0,0.5);
+         transition: color .5s;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <div id="type">
+      Type to start
+    </div>
+    <div id="record">
+    </div>
+    <div id="display">
+
+    </div>
+    <div id="cursor">
+    </div>
+  </body>
+  <script type="text/javascript" src="test.js">
+  </script>
+</html>

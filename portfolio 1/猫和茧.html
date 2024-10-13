@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<html>
+    <style>
+
+body{
+           
+           background-image: url("cat/sun.JPG");
+           background-position:30px;
+           background-size:cover;
+           padding:0;
+           margin:0;
+           font-size: 5vw;
+           width: 40vw;
+           left: 35vw;
+           position:fixed;
+           z-index:-1;
+       }
+
+
+        .mao{
+            font-size:20px;
+            color:white;
+            z-index:100;
+        }
+
+        .wu{
+            position:absolute;
+            top:370px;
+            left:400px;
+            width:10px;
+        }
+
+        .mew{
+            position:absolute;
+            top:450px;
+            left:600px;
+            width:10px;
+        }
+
+        .tai{
+            position:absolute;
+            top:400px;
+            left:850px;
+        }
+
+        .pan{
+            position:absolute;
+            top:450px;
+            left:740px;
+            width:10px;
+        }
+
+        .scrolling-container1 {
+  height: 200px; /* Define a fixed height for the container */
+  overflow: hidden; /* Hide the content that overflows the container */
+  color:white;
+  font-size:20px;
+}
+
+.wu {
+  animation: scroll-animation 10s linear infinite; /* Adjust the duration (10s) as needed */
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.scrolling-container2 {
+  height: 200px; /* Define a fixed height for the container */
+  overflow: hidden; /* Hide the content that overflows the container */
+  color:white;
+  font-size:20px;
+}
+
+.mew {
+  animation: scroll-animation 10s linear infinite; /* Adjust the duration (10s) as needed */
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.scrolling-container3 {
+  height: 200px; /* Define a fixed height for the container */
+  overflow: hidden; /* Hide the content that overflows the container */
+  color:white;
+  font-size:20px;
+}
+
+.tai {
+  animation: scroll-animation 10s linear infinite; /* Adjust the duration (10s) as needed */
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.cloud{
+    height:800px;
+    position:absolute;
+    right:-400px;
+    top:-360px;
+    z-index:20;
+}
+
+.scrolling-container4 {
+  height: 200px; /* Define a fixed height for the container */
+  overflow: hidden; /* Hide the content that overflows the container */
+  color:red;
+  font-size:30px;
+  transition: font-style 0.5s ease-out;
+  transition: font-size 0.5s ease-out;
+}
+
+.scrolling-container4:hover{
+    font-style: italic;
+    font-size:40px;
+
+}
+
+.pan{
+  animation: scroll-animation 3s linear infinite; /* Adjust the duration (10s) as needed */
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.sugar{
+    position:absolute;
+    top:350px;
+    left:-350px;
+    z-index:200;
+    height:300px;
+    transition: 
+    transform 4s ease-in-out,
+    top 3s ease-in,
+    scale 3s ease-in-out,
+    left 3s ease-in-out;
+}
+
+.sugar:hover{
+    transform:rotate(290deg);
+    position:absolute;
+    left:100px;
+    top:125px;
+    scale: 60%;
+}
+
+.follow{
+    color:white;
+   font-size:30px;
+}
+
+.lantern{
+    height:200px;
+    position:absolute;
+    left:-180px;
+    top:20px;
+    transition: 
+    brightness 0.5s ease-in-out;
+}
+
+.lantern:hover{
+    filter:brightness(180%);
+}
+
+.click{
+    font-size:15px;
+    color:white;
+    position:absolute;
+    bottom:85vh;
+    right:55vw;
+    z-index:3000;
+    width:200px;
+
+}
+
+    </style>
+
+    <body>
+
+        <img class="sugar" src="cat/sugar.PNG">
+
+        <img class="cloud" src="cat/cloud.png">
+
+       <a href="凌晨2点.html"> <img class="lantern" src="cat/lantern.PNG"></a>
+
+        <p class="mao">
+            <div class="scrolling-container1">
+           <span class="wu">银发不如树间反射的金黄</span> </br>
+        </div>
+        <div class="scrolling-container2">
+            <span class="mew">迎接不安的凌晨</span></br>
+        </div>
+        <div class="scrolling-container3">
+            <span class="tai">映出了太阳的每一张阅历</span></br>
+            </p>
+        </div>
+        <div class="scrolling-container4">
+            <span class="pan">蹒跚</span></br>
+        </div>
+       
+
+        <div class="click">click lantern for waking pills</div>
+
+
+    </body>
+
+
+    <script>
+
+        const image = document.querySelector('.cloud');
+        let isDragging = false;
+
+        image.addEventListener('mousedown', (event) => {
+        isDragging = true;
+        image.style.pointerEvents = 'none';
+        });
+
+        document.addEventListener('mousemove', (event) => {
+        if (isDragging) {
+            const left = event.clientX - (image.width + 500);
+            const top = event.clientY - (image.height);
+            image.style.left = `${left}px`;
+            image.style.top = `${top}px`;
+        }
+        });
+
+        document.addEventListener('mouseup', () => {
+        isDragging = false;
+        image.style.pointerEvents = 'auto';
+        });
+
+        </script>
+</html>

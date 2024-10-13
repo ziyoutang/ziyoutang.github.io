@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+<html>
+
+
+<style>
+    body{
+           
+           background-image: url("披头士/bg.jpeg");
+           padding:0;
+           margin:0;
+           font-size: 5vw;
+           width: 20vw;
+           left: 35vw;
+           position:fixed;
+       }
+
+    
+    .text{
+        font-size:15px;
+        color:white;
+        margin-top:260px;
+        margin-left:-400px;
+        cursor:pointer;
+        line-height:200%;
+    }
+
+    .text1{
+        font-size:15px;
+        color:white;
+        position:absolute;
+        top:35vh;
+        right:-30vw;
+        cursor:pointer;
+        line-height:200%;
+        text-align:right;
+    }
+
+
+
+    .beatles{
+        font-size:40px;
+        color:brown;
+        font-style: italic;
+        text-shadow:0 0px 5px rgb(255, 255, 255);  
+
+    }
+
+
+    #swing {
+            position: relative;
+            width: 2000px;
+            height: 300px;
+            margin: 50px auto;
+            overflow: hidden;
+            top:-70vh;
+            right:3vw;
+        }
+
+
+    #guitar{
+        position:absolute;
+        height:50vh;
+        top:-10vh;
+    }
+
+    #man1{
+        height:40vh;
+        position:fixed;
+        bottom:0vh;
+        left:0vw;
+        z-index:100;
+        cursor: pointer;
+    }
+
+    #man2{
+        height:40vh;
+        position:fixed;
+        bottom:0vh;
+        left:-2vw;
+        z-index:100;
+        cursor:pointer;
+        display:none;
+    }
+
+    .cokes{
+        position:absolute;
+        height:20vh;
+        top:80vh;
+        left:-20vw;
+        transition: filter 0.3s ease-in-out;
+        display:none;
+        z-index:100;
+    }
+
+    .coke{
+        font-size:30px;
+        color:rgb(80, 7, 7);
+        transition:  letter-spacing 1s ease-in-out, text-shadow 2s ease-in;
+    }
+
+    .coke:hover{
+        letter-spacing:30px;
+        text-shadow:0 10px 10px rgb(255, 255, 255);  
+    }
+
+    .cokes:hover{
+        filter:sepia(400%);
+    }
+
+    .press{
+        color:darkgreen;
+        font-size:14px;
+        position:absolute;
+        top:30vh;
+        width:40vw;
+        right:-7vw;
+        text-shadow:0 0px 1px rgba(255, 255, 255, 0.53);  
+
+    }
+
+
+    .train{
+        transition: transform 10s ease;
+        position:fixed;
+        right:-40vw;
+        z-index:-100;
+    }
+
+    .train:hover{
+        transform: translateX(-70%)
+    }
+
+    .click{    font-size:15px;
+    color:white;
+    position:absolute;
+    right:52vw;
+    bottom:-40vh;
+    z-index:30000;
+    width:200px;
+
+}
+
+</style>
+
+
+<body>
+    <div class="text"  onclick="audio.play();">
+
+穿着校服的<span class="beatles">披头士</span></br>
+正弹着劣质的摇滚乐</br>
+发丝交错着电车遗留的灰</br>
+独自伴着贩卖机滴答掉落的闷响</br>
+产出一瓶   <span class="coke">铁罐可乐</span></br>
+气泡腐烂</br>
+如几毛钱的白兰地</br>
+</br>
+</div>
+
+<div class="text1">
+他曾经也如此</br>
+在同样肮脏却明亮的油灯下</br>
+一点点的撩拨生锈如毛线的弦</br>
+软硬相连</br>
+是绒毛陷入指甲的契机</br>
+
+
+<div class="click">What's inside The Beatles?</div>
+
+</div>
+
+
+
+    <div class="press">
+        click for rotting jazz
+    </div>
+
+  <a href="蓝色的月亮.html"><img id="man1" src="披头士/beatles.PNG"></a> 
+    <img id="man2" src="披头士/beatles2.PNG">
+
+    <img class="cokes" src="披头士/coke.PNG">
+   
+    <img class="train" src="披头士/train.PNG">
+
+    <div id="swing">
+        <img id="guitar" src="披头士/guitar.PNG">
+    </div>
+
+ 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script src="pitoushi.js"></script>
+
+<script type="text/javascript">
+    const audio = new Audio();
+    audio.src = "披头士/her.mp3";
+  </script>
+
+
+<script>
+    const triggerElement1 = document.querySelector('.coke');
+const newElement2 = document.querySelector('.cokes');
+
+triggerElement1.addEventListener('mouseenter', function() {
+newElement2.style.display = 'block';
+});
+
+triggerElement1.addEventListener('mouseleave', function() {
+newElement2.style.display = 'none';
+});
+
+</script>
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+    const swing = document.getElementById('swing');
+    const seat = document.getElementById('guitar');
+
+    let angle = 20;
+    let amplitude = 10;
+    let frequency = 0.02;
+
+    function animateSwing() {
+        angle += frequency;
+        let displacement = amplitude * Math.sin(angle);
+        seat.style.transform = `translateY(${displacement}px)`;
+
+        requestAnimationFrame(animateSwing);
+    }
+
+    animateSwing();
+});
+</script>
+
+
+
+
+</body>
+
+
+
+</html>

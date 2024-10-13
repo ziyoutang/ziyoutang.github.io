@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+  <head>
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans Thai' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Noto Sans' rel='stylesheet'>
+    <html>
+    <link rel="shortcut icon" href="OralO.png" />
+    <style media="screen">
+      body {
+         user-select: none;
+         min-width: 1200px;
+           background-image: url("Feel\ free\ to\ vent.jpeg");
+           background-size:fixed;
+           background-size:80vh;
+           z-index:-10;
+    
+      }
+      #type, #display, #record{
+         width:90%;
+         height:40%;
+         margin:5%;
+         font-family:'Courier New', Courier, monospace;
+         z-index:30;
+
+      }
+      #type, #display
+      {
+        font-size:20px;
+        z-index:30;}
+
+
+        #display{
+        position:fixed;
+        top:40vh;}
+
+      
+      #display.erase {
+        word-break: break-all;
+      }
+      #record {
+        font-size:15px;
+        line-height:80px;
+      }
+      #display span {
+        margin-left:20px;
+      }
+      #type {
+        color:grey;
+        z-index:10;
+      }
+      #left, #right {
+        width:75%;
+        font-size:36px;
+      }
+      #left span, #right span{
+        display: inherit;
+        line-height: 5px;
+        margin:0 !important;
+        color:white;
+        -webkit-transition: line-height 7s ease-in, font-size 7s ease-in;
+        transition: line-height 7s ease-in, font-size 7s ease-in;
+      }
+      #display.expand #left span, #display.expand #right span{
+        line-height: 36px;
+        font-size: 48px;
+      }
+
+      @keyframes fadeOut {
+        from {color:white;}
+        to {color:white;}
+      }
+
+      #left {
+        float:left;
+        margin-left: -25%;
+        text-align: right;
+      }
+      #right {
+        margin-left: 52%;
+      }
+      .final {
+        margin: 0 !important;
+        animation-name: fadeOut;
+        animation-duration: 3s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
+        -webkit-animation-name: fadeOut; /* Safari 4.0 - 8.0 */
+        -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+        -webkit-animation-fill-mode: forwards;
+        -webkit-animation-delay: 2s;
+      }
+      .blur {
+         color: transparent;
+         text-shadow: 0 0 40px rgba(0,0,0,0.5);
+         transition: color .5s;
+      }
+
+
+      #one{
+  z-index: -32;
+  position:fixed;
+  left:410px;
+  top:100px;
+scale:100%;
+display:none;
+      }
+
+
+      #image5{
+        position:fixed;
+        width:8vw;
+        right:3vw;
+       top:45vh;
+
+       z-index:50;
+       transition: opacity 0.5s;
+  opacity: 0;
+
+      }
+
+    #image5.active {
+  opacity: 1;
+}
+
+.filter-applied {
+  filter:grayscale(100);
+}
+    
+      #image4{
+        position:fixed;
+        width:8vw;
+        right:16vw;
+       top:57vh;
+
+        transform:rotate(30deg);
+
+        z-index:100;
+        transition: opacity 0.5s;
+  opacity: 0;
+      }
+
+
+      #image7{
+        position:fixed;
+        width:5vw;
+        right:8.5vw;
+       top:59vh;
+       
+
+       z-index:50;
+       transition: opacity 0.1s;
+  opacity: 0;
+      }
+
+    #image7.active {
+  opacity: 1;
+}
+
+      #image2{
+        position:absolute;
+        width:5vw;
+        right:11.5vw;
+       top:46vh;
+        z-index:50;
+        transform:rotate(12deg);
+        transition: opacity 0.5s;
+        filter:grayscale(100);
+  opacity: 0;
+      }
+
+    #image2.active {
+  opacity: 1;
+}
+      #image3{
+        position:absolute;
+        width:5vw;
+        right:12vw;
+       top:60vh;
+        z-index:50;
+        filter:grayscale(100);
+  transition: opacity 0.5s;
+  opacity: 0;
+      }
+
+    #image3.active {
+  opacity: 1;
+}
+
+#image3 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image3.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+#image7 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image7.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+#image4 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image4.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+#image5 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image5.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+
+#image8 {
+  position: absolute;
+  width: 10vw;
+  right: 12vw;
+  top: 45vh;
+opacity:0;
+  z-index: 50;
+  filter: none;
+  transition: opacity 0.5s;
+  transform: rotate(12deg);
+  cursor:pointer;
+}
+
+#image9 {
+  position: absolute;
+  width:20vw;
+        right:5vw;
+       bottom:25vh;
+  z-index: 50;
+  filter: none;
+  transition: opacity 0.5s;
+  opacity: 0; 
+}
+
+
+#image8 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image8.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+#image2 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image2.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+#image6 {
+  transition: filter 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+#image6.filter-applied {
+  filter: none;
+  opacity: 1;
+}
+
+
+#image6{
+        position:fixed;
+        width:30vw;
+        right:0vw;
+       bottom:25vh;
+        z-index:30;
+        filter:invert(30);
+        transition: opacity 0.5s;
+  opacity: 0;
+      }
+
+    #image6.active {
+  opacity: 1;
+}
+
+
+#image1{
+        position:fixed;
+        width:22vw;
+        right:5vw;
+       bottom:23vh;
+        z-index:30;
+        filter:invert(30);
+
+      }
+
+      #imperfection{
+        color:white;
+        position:fixed;
+        bottom:5vh;
+        right:43vw;
+      }
+
+
+      .image-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s;
+      opacity: 0;
+    }
+
+    .image-container img.active {
+      opacity: 1;
+    }
+  
+      
+
+    </style>
+
+  </head>
+  <body>
+        <div id="type">
+          Type to dissect </br>Y-O-Y-O
+        </div>
+    
+        <div id="record"></div>
+    
+        <div id="display"></div>
+    
+        <div id="cursor"></div>
+    
+        <div id="one">
+          <video autoplay muted loop>
+            <source src="self portrait video/self portrait final.mp4" type="video/mp4">
+          </video>
+        </div>
+    
+        <img id="image1" src="self portrait video/closed.png" alt="Image 1" class="active">
+        <img id="image2" src="self portrait video/album.PNG" alt="Image 2">
+        <img id="image3" src="self portrait video/ball.png" alt="Image 3">
+        <img id="image4" src="self portrait video/camera.PNG" alt="Image 4">
+        <img id="image5" src="self portrait video/phone.PNG" alt="Image 5">
+        <img id="image6" src="self portrait video/open.png" alt="Image 6">
+        <img id="image7" src="self portrait video/storyboard.PNG" alt="Image 7">
+    
+        <img id="image8" src="self portrait video/china.png" alt="image 8" >
+        <img id="image9" src="self portrait video/bag.png" alt="image 9">
+    
+        <div id="imperfection">Stats as Imperfection, the gateway to expression</div>
+    
+        <script type="text/javascript" src="test.js"></script>
+      </body>
+  <script type="text/javascript" src="test.js">
+  </script>
+</html>

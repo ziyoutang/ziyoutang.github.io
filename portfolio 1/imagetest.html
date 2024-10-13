@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .image-container img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.5s;
+      opacity: 0;
+    }
+
+    .image-container img.active {
+      opacity: 1;
+    }
+  </style>
+  <body>
+    <div class="image-container">
+      <img id="image1" src="self portrait video/album.PNG" alt="Image 1" class="active">
+      <img id="image2" src="self portrait video/ball.png" alt="Image 2">
+      <img id="image3" src="self portrait video/camera.PNG" alt="Image 3">
+      <img id="image4" src="self portrait video/phone.PNG" alt="Image 4">
+      <img id="image5" src="self portrait video/open.png" alt="Image 5">
+    </div>
+
+    <script>
+      var images = [
+        document.getElementById("image1"),
+        document.getElementById("image2"),
+        document.getElementById("image3"),
+        document.getElementById("image4"),
+        document.getElementById("image5")
+      ];
+
+      // Event listener for keydown event
+      document.addEventListener("keydown", function(event) {
+        images[0].style.opacity = "0";
+        for (var i = 1; i < images.length; i++) {
+          images[i].style.opacity = "1";
+        }
+      });
+    </script>
+  </body>
+</html>

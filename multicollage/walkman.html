@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        body{
+            background-image:url(collage/black.gif);
+            background-size:cover;
+            height: 90vh;
+            padding:0;
+            margin-right:10px;
+            font-size: 5vw;
+            width: 40vw;
+            position:fixed;
+        }
+
+        #moving-image {
+    position: absolute;
+    left: 0;
+    animation: move-image 5s linear infinite;
+  }
+  
+  @keyframes move-image {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    50% {
+      transform: translateX(calc(100vw - 100px)) translateY(calc(100vh - 100px));
+    }
+    100% {
+      transform: translateX(0) translateY(0);
+    }
+  }
+        </style>
+    </head>
+    <body>
+        <img id="moving-image" src="collage/eyes.gif" alt="Your image">
+
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+        <script class="animation" src="var canvas;.js">  </script>
+    </body>
+
+</html>
